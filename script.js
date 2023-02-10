@@ -7,6 +7,11 @@ const addButton = document.querySelector('.addButton');
 
 addButton.addEventListener ('click', renderLibrary());
 
+addButton.addEventListener("click", function () {
+    for(let i = 0; i < library.length; i++){
+        createDisplay(library[i]);
+    }
+})
 function Book(title, author, pages, read){
     this.title = title;
     this.author = author;
@@ -20,9 +25,7 @@ function addBookToLibrary(title, author, pages, read){
     library.push(bookObj);
 }
 function renderLibrary(){
-    for(let i = 0; i < library.length; i++){
-        createDisplay(library[i]);
-    }
+
 }
 function createDisplay(obj){
     const bookContainerDiv = document.createElement('div');
