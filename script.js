@@ -1,17 +1,50 @@
 let library = [];
-
+let cbTrue = "yes!";
+let cbFalse = "heck no";
 const container = document.querySelector('.container');
 const addButton = document.querySelector('.addButton');
+const newBookButton = document.querySelector('.newBookButton');
+const btnAddBook = document.querySelector('.btnAddBook');
 
+// addButton.addEventListener ('click', renderLibrary());
+newBookButton.addEventListener ('click', openForm());
 
+function closeForm(){
+    document.getElementById('formContainer').style.display='none'
+}
+closeForm();
 
-addButton.addEventListener ('click', renderLibrary());
+function openForm(){
+    document.getElementById('formContainer').style.display='block'
+    document.getElementById('formPopup').reset();
+    // clearAllRequiredFields();
+}
 
 addButton.addEventListener("click", function () {
     for(let i = 0; i < library.length; i++){
         createDisplay(library[i]);
     }
 })
+newBookButton.addEventListener ('click', function() {
+    document.getElementById('formContainer').style.display='block'
+    document.getElementById('formPopup').reset();
+    // clearAllRequiredFields();
+})
+btnAddBook.addEventListener("click",function(){
+    let title = document.getElementById("titleInput").value;
+    let author = document.getElementById("authorInput").value;
+    let pages = document.getElementById("pagesInput").value;
+    let cb = document.getElementById("hasRead").checked;
+    if(cb){
+        addBookToLibrary(title,author,pages,cbTrue);
+    }
+    else{
+        addBookToLibrary(title,author,pages,cbFalse);
+    }
+
+})
+
+
 function Book(title, author, pages, read){
     this.title = title;
     this.author = author;
@@ -58,7 +91,14 @@ function createDisplay(obj){
     bookDiv.appendChild(readDiv);
 }
 addBookToLibrary("loco","moko","poko","boko");
-
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
 
 
 
