@@ -3,11 +3,20 @@
     --light-text: white;
     --grey-text:rgb(119, 119, 119);
     /* --hover-link: rgb(45, 109, 212); */
-    --background-col: rgb(234, 234, 240);
-    --shadow-col:#fecfcf;
+    --background-col: #2B3A55;
+    --shadow-col:#CE7777;
 }
 
+body{
+    background-color: var(--background-col);
+    margin:0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
 .cardblock{
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top:20px;
     display:grid;
     gap:15px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -20,7 +29,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: max-content;
     width: fit-content;
-    background-color: #fcfaf5;
+    background-color: #F2E5E5;
     width: 48%;
     height: 100px;
     margin-bottom: 20px;
@@ -35,4 +44,15 @@
     /* background-image: linear-gradient(left, var(--shadow-col),#86A3B8 2%, transparent 2%, transparent 100%);
     background-image: -webkit-linear-gradient(left, var(--shadow-col), #86A3B8 2%, transparent 2%, transparent 100%);
      */
+}
+.section-title{
+    color:white;
+    font-size: 22px;
+    font-weight: 400;
+    grid-column: 1 / -1;
+    margin: 35px 30px 15px 30px;
+}
+.controls{
+    display:flex;
+
 }
