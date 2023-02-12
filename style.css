@@ -1,0 +1,38 @@
+:root {
+    --dark-text: rgb(53, 53, 67);
+    --light-text: white;
+    --grey-text:rgb(119, 119, 119);
+    /* --hover-link: rgb(45, 109, 212); */
+    --background-col: rgb(234, 234, 240);
+    --shadow-col:#fecfcf;
+}
+
+.cardblock{
+    display:grid;
+    gap:15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: max-content;
+}
+
+.book{
+    display:grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: max-content;
+    width: fit-content;
+    background-color: #fcfaf5;
+    width: 48%;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    min-width: 265px;
+    box-shadow: 5px 5px 1px var(--shadow-col);
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-image: linear-gradient(left, var(--shadow-col),#86A3B8 2%, transparent 2%, transparent 100%);
+    background-image: -webkit-linear-gradient(left, var(--shadow-col), #86A3B8 2%, transparent 2%, transparent 100%);
+     */
+}

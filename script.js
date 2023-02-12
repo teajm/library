@@ -7,7 +7,7 @@ const container = document.querySelector('.container');
 const addButton = document.querySelector('.addButton');
 const newBookButton = document.querySelector('.newBookButton');
 const addBookButton = document.querySelector('.addBookButton');
-const bookContainerDiv = document.querySelector('.cards-block');
+const bookContainerDiv = document.querySelector('.cardblock');
 // addButton.addEventListener ('click', renderLibrary());
 newBookButton.addEventListener ('click', openForm());
 
@@ -90,8 +90,8 @@ function createDisplay(obj){
     authorDiv.setAttribute("id","bookauthor");
     pagesDiv.setAttribute("id","bookpages");
     readDiv.setAttribute("id","bookstatus");
-    bookContainerDiv.setAttribute('data', library.indexOf(obj));
-    container.appendChild(bookContainerDiv);
+    // bookContainerDiv.setAttribute('data', library.indexOf(obj));
+
 
     bookDiv.classList.add('book');
     bookContainerDiv.appendChild(bookDiv);
@@ -112,6 +112,14 @@ function createDisplay(obj){
     readDiv.classList.add('read');
     bookDiv.appendChild(readDiv);
 }
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("loco","moko","poko","boko");
 addBookToLibrary("loco","moko","poko","boko");
 
 
