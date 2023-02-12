@@ -56,3 +56,18 @@ body{
     display:flex;
 
 }
+#github-logo{
+    width:18px;
+    height:18px;
+}
+#github-logo:hover{
+    transition:.5s;
+    filter: brightness(125%);
+}
+#footer{
+    display:flex;
+    align-items: center;
+    position:absolute;
+    bottom:0;
+    gap:10px;
+}
