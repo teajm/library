@@ -65,9 +65,33 @@ body{
     filter: brightness(125%);
 }
 #footer{
+    color:white;
     display:flex;
     align-items: center;
     position:absolute;
     bottom:0;
     gap:10px;
+}
+button{
+    font-family: monospace;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:40px;
+    width: 120px;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 5px 5px 1px #89C4E1;
+    outline: none;
+}
+button:hover{
+    transition:.5s;
+    background-color: #dff4ff;
+    color:#CE7777;
+}
+.buttonz{
+    display:flex;
+}
+#deletebutton{
+    width:15 !important;
 }

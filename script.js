@@ -8,6 +8,7 @@ const addButton = document.querySelector('.addButton');
 const newBookButton = document.querySelector('.newBookButton');
 const addBookButton = document.querySelector('.addBookButton');
 const bookContainerDiv = document.querySelector('.cardblock');
+
 // addButton.addEventListener ('click', renderLibrary());
 newBookButton.addEventListener ('click', openForm());
 
@@ -76,8 +77,9 @@ function clearDivs(){
         bookContainerDiv.removeChild(bookContainerDiv.firstChild);
       }
 }
-function deleteDiv(div){
-    bookContainerDiv.removeChild(bookContainerDiv.firstChild);
+function removeBook(index){
+    library.splice(index,1);
+    renderLibrary();
 }
 
 function createDisplay(obj){
@@ -86,11 +88,13 @@ function createDisplay(obj){
     const authorDiv = document.createElement('div');
     const pagesDiv = document.createElement('div');
     const readDiv = document.createElement('div');
+    const deleteButton = document.createElement('button');
     titleDiv.setAttribute("id","booktitle");
     authorDiv.setAttribute("id","bookauthor");
     pagesDiv.setAttribute("id","bookpages");
     readDiv.setAttribute("id","bookstatus");
-    // bookContainerDiv.setAttribute('data', library.indexOf(obj));
+    deleteButton.setAttribute("id","deletebutton");
+    bookDiv.setAttribute('data', library.indexOf(obj));
 
 
     bookDiv.classList.add('book');
@@ -111,6 +115,16 @@ function createDisplay(obj){
     readDiv.textContent = obj.read;
     readDiv.classList.add('read');
     bookDiv.appendChild(readDiv);
+
+
+    deleteButton.textContent = 'delete';
+    bookDiv.appendChild(deleteButton);
+
+    deleteButton.addEventListener("click",function(){
+        const currentIndex=Number(deleteButton.parentNode.getAttribute('data'));
+        removeBook(currentIndex)
+    })
+    
 }
 addBookToLibrary("loco","moko","poko","boko");
 addBookToLibrary("loco","moko","poko","boko");
@@ -121,6 +135,5 @@ addBookToLibrary("loco","moko","poko","boko");
 addBookToLibrary("loco","moko","poko","boko");
 addBookToLibrary("loco","moko","poko","boko");
 addBookToLibrary("loco","moko","poko","boko");
-
 
 // renderLibrary(0);
