@@ -89,11 +89,13 @@ function createDisplay(obj){
     const pagesDiv = document.createElement('div');
     const readDiv = document.createElement('div');
     const deleteButton = document.createElement('button');
+    const readButton = document.createElement('button');
     titleDiv.setAttribute("id","booktitle");
     authorDiv.setAttribute("id","bookauthor");
     pagesDiv.setAttribute("id","bookpages");
     readDiv.setAttribute("id","bookstatus");
-    deleteButton.setAttribute("id","deletebutton");
+    deleteButton.setAttribute("id","cardbuttons");
+    readButton.setAttribute("id","cardbuttons");
     bookDiv.setAttribute('data', library.indexOf(obj));
 
 
@@ -117,12 +119,23 @@ function createDisplay(obj){
     bookDiv.appendChild(readDiv);
 
 
-    deleteButton.textContent = 'delete';
     bookDiv.appendChild(deleteButton);
+    const cardBtnIcon = document.createElement('img');
+    cardBtnIcon.setAttribute('src', './images/delete.svg');
+    cardBtnIcon.classList.add('card-btn-svg');
+    deleteButton.append(cardBtnIcon);
+
+    readButton.textContent = "Read";
+    bookDiv.appendChild(readButton);
 
     deleteButton.addEventListener("click",function(){
         const currentIndex=Number(deleteButton.parentNode.getAttribute('data'));
         removeBook(currentIndex)
+    })
+    readButton.addEventListener("click",function(){
+        obj.read = "read";
+        readDiv.textContent = obj.read;
+        renderLibrary;
     })
     
 }

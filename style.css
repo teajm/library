@@ -72,7 +72,7 @@ body{
     bottom:0;
     gap:10px;
 }
-button{
+#control-buttons{
     font-family: monospace;
     display:flex;
     align-items:center;
@@ -84,13 +84,25 @@ button{
     box-shadow: 5px 5px 1px #89C4E1;
     outline: none;
 }
-button:hover{
+#control-buttons:hover{
     transition:.5s;
     background-color: #dff4ff;
     color:#CE7777;
 }
 .buttonz{
     display:flex;
+}
+#cardbuttons{
+    font-family: monospace;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:40px;
+    width: 30px;
+    font-size: 15px;
+    /* background-color: hsl(0, 0%, 100%); */
+    /* box-shadow: 5px 5px 1px #89C4E1; */
+    /* outline: none; */
 }
 #deletebutton{
     width:15 !important;
