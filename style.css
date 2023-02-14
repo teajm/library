@@ -10,8 +10,9 @@
 body{
     background-color: var(--background-col);
     margin:0;
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: monospace;
+    font-size: 14px;
 }
 .cardblock{
     margin-left: 100px;
@@ -25,13 +26,13 @@ body{
 
 .book{
     display:grid;
-    gap: 10px;
+    gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: max-content;
     width: fit-content;
     background-color: #F2E5E5;
     width: 48%;
-    height: 100px;
+    height: 125px;
     margin-bottom: 20px;
     margin-right: 10px;
     border-radius: 5px;
@@ -54,7 +55,8 @@ body{
 }
 .controls{
     display:flex;
-
+    align-items: flex-end;
+    justify-content: space-around;
 }
 #github-logo{
     width:18px;
@@ -71,6 +73,8 @@ body{
     position:absolute;
     bottom:0;
     gap:10px;
+    justify-content: center;
+    width:100%;
 }
 #control-buttons{
     font-family: monospace;
@@ -91,6 +95,10 @@ body{
 }
 .buttonz{
     display:flex;
+    margin-bottom: 10px;
+}
+.addButton{
+    margin-right: 25px;
 }
 #cardbuttons{
     font-family: monospace;
@@ -106,4 +114,18 @@ body{
 }
 #deletebutton{
     width:15 !important;
+}
+#buttondiv{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#cardbuttons{
+    margin-left: 15px;
+    width:50px;
+    height:80%;
+    font-size: 10px
+}
+#booktitle{
+    font-weight: 700;
 }

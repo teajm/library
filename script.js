@@ -90,12 +90,14 @@ function createDisplay(obj){
     const readDiv = document.createElement('div');
     const deleteButton = document.createElement('button');
     const readButton = document.createElement('button');
+    const buttonDiv = document.createElement('div');
     titleDiv.setAttribute("id","booktitle");
     authorDiv.setAttribute("id","bookauthor");
     pagesDiv.setAttribute("id","bookpages");
     readDiv.setAttribute("id","bookstatus");
     deleteButton.setAttribute("id","cardbuttons");
     readButton.setAttribute("id","cardbuttons");
+    buttonDiv.setAttribute("id","buttondiv");
     bookDiv.setAttribute('data', library.indexOf(obj));
 
 
@@ -117,16 +119,16 @@ function createDisplay(obj){
     readDiv.textContent = obj.read;
     readDiv.classList.add('read');
     bookDiv.appendChild(readDiv);
+    bookDiv.appendChild(buttonDiv);
+    deleteButton.textContent = "delete";
+    buttonDiv.appendChild(deleteButton);
+    // const cardBtnIcon = document.createElement('img');
+    // cardBtnIcon.setAttribute('src', './images/delete.svg');
+    // cardBtnIcon.classList.add('card-btn-svg');
+    // deleteButton.append(cardBtnIcon);
 
-
-    bookDiv.appendChild(deleteButton);
-    const cardBtnIcon = document.createElement('img');
-    cardBtnIcon.setAttribute('src', './images/delete.svg');
-    cardBtnIcon.classList.add('card-btn-svg');
-    deleteButton.append(cardBtnIcon);
-
-    readButton.textContent = "Read";
-    bookDiv.appendChild(readButton);
+    readButton.textContent = "read";
+    buttonDiv.appendChild(readButton);
 
     deleteButton.addEventListener("click",function(){
         const currentIndex=Number(deleteButton.parentNode.getAttribute('data'));
