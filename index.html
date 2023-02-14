@@ -9,6 +9,23 @@
 </head>
 <body>
     <div class ="container">
+        <div class='formContainer' id='formContainer'>
+            <form class='formPopup' id= 'formPopup'>
+                <p class='formHeader'>add new book</p>
+                <input class='formInput' type='text' placeholder='title' id='titleInput' required>
+                <input class='formInput' type='text' placeholder='author' id='authorInput' required>
+                <input class='formInput' type='number' placeholder='pages' id='pagesInput' max='100000' required>
+                <div class='readCheckbox'>
+                    <label for='hasRead'>read?</label>
+                    <input type='checkbox' id='hasRead' name='hasRead'>
+                </div>
+                <div id = "buttonz">
+                <button class='addBookButton' form='formContainer' type='submit' id='addBookButton'>Add</button>
+                <button class='closeForm' id='closeButton'>Cancel</button>
+                </div>
+        </form>
+
+    </div>
         <div class = "header">
 
         </div>
@@ -27,23 +44,7 @@
             </div>
 
         </div>
-        <div class='formContainer' id='formContainer'>
-            <form class='formPopup' id= 'formPopup'>
-                <p class='formHeader'>add new book</p>
-                <input class='formInput' type='text' placeholder='Title' id='titleInput' required>
-                <input class='formInput' type='text' placeholder='Author' id='authorInput' required>
-                <input class='formInput' type='number' placeholder='Pages' id='pagesInput' max='100000' required>
-                <div class='readCheckbox'>
-                    <label for='hasRead'>read?</label>
-                    <input type='checkbox' id='hasRead' name='hasRead'>
-                </div>
-                <div id = "buttonz">
-                <button class='addBookButton' form='formContainer' type='submit' id='addBookButton'>Add</button>
-                <button class='closeFormbutton' id='closeFormbutton'>Cancel</button>
-            </div>
-            </form>
 
-    </div>
     <div id = "footer">
         <p>made by taylor</p>
         <a href = "https://github.com/teajm">

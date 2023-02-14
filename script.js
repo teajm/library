@@ -8,17 +8,20 @@ const addButton = document.querySelector('.addButton');
 const newBookButton = document.querySelector('.newBookButton');
 const addBookButton = document.querySelector('.addBookButton');
 const bookContainerDiv = document.querySelector('.cardblock');
-
+const closeButton = document.querySelector('#closeButton');
+closeButton.addEventListener("click",function(){
+    document.getElementById('formContainer').style.display='none';
+})
 // addButton.addEventListener ('click', renderLibrary());
 newBookButton.addEventListener ('click', openForm());
 
 function closeForm(){
-    document.getElementById('formContainer').style.display='none'
+    document.getElementById('formContainer').style.display='none';
 }
 closeForm();
 
 function openForm(){
-    document.getElementById('formContainer').style.display='block'
+    document.getElementById('formContainer').style.display='block';
     document.getElementById('formPopup').reset();
     // clearAllRequiredFields();
 }
@@ -26,7 +29,7 @@ function openForm(){
 
 
 newBookButton.addEventListener ('click', function() {
-    document.getElementById('formContainer').style.display='block'
+    document.getElementById('formContainer').style.display='block';
     document.getElementById('formPopup').reset();
     // clearAllRequiredFields();
 })
@@ -141,14 +144,7 @@ function createDisplay(obj){
     })
     
 }
-addBookToLibrary("loco","moko","poko","boko");
-addBookToLibrary("loco","moko","poko","boko");
-addBookToLibrary("loco","moko","poko","boko");
-addBookToLibrary("loco","moko","poko","boko");
-addBookToLibrary("loco","moko","poko","boko");
-addBookToLibrary("loco","moko","poko","boko");
-addBookToLibrary("loco","moko","poko","boko");
-addBookToLibrary("loco","moko","poko","boko");
-addBookToLibrary("loco","moko","poko","boko");
+addBookToLibrary("The Lord of the Rings","Tolkien","1178","read");
+addBookToLibrary("The Hobbit","Tolkien","300","read");
 
 // renderLibrary(0);
