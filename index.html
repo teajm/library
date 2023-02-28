@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>it's a library</title>
-    <link rel = "stylesheet" href = "style.css">
-</head>
-<body>
-    <div class ="container">
-        <div class='formContainer' id='formContainer'>
-            <form class='formPopup' id= 'formPopup'>
-                <p class='formHeader'>add new book</p>
-                <input class='formInput' type='text' placeholder='title' id='titleInput' required>
-                <input class='formInput' type='text' placeholder='author' id='authorInput' required>
-                <input class='formInput' type='number' placeholder='pages' id='pagesInput' max='100000' required>
-                <div class='readCheckbox'>
-                    <label for='hasRead'>read?</label>
-                    <input type='checkbox' id='hasRead' name='hasRead'>
-                </div>
-                <div id = "buttonz">
-                <button class='addBookButton' form='formContainer' type='submit' id='addBookButton'>Add</button>
-                <button class='closeForm' id='closeButton'>Cancel</button>
-                </div>
-        </form>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>it's a library</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="formContainer" id="formContainer">
+				<form class="formPopup" id="formPopup">
+					<p class="formHeader">add new book</p>
+					<input
+						class="formInput"
+						type="text"
+						placeholder="title"
+						id="titleInput"
+						required
+					/>
+					<input
+						class="formInput"
+						type="text"
+						placeholder="author"
+						id="authorInput"
+						required
+					/>
+					<input
+						class="formInput"
+						type="number"
+						placeholder="pages"
+						id="pagesInput"
+						max="100000"
+						required
+					/>
+					<div class="readCheckbox">
+						<label for="hasRead">read?</label>
+						<input type="checkbox" id="hasRead" name="hasRead" />
+					</div>
+					<div id="buttonz">
+						<button
+							class="addBookButton"
+							form="formContainer"
+							type="submit"
+							id="addBookButton"
+						>
+							Add
+						</button>
+						<button class="closeForm" id="closeButton">Cancel</button>
+					</div>
+				</form>
+			</div>
+			<div class="header"></div>
+			<div class="library">
+				<div class="controls">
+					<div class="section-title">it's a library</div>
+					<div class="buttonz">
+						<button class="addButton" id="control-buttons">enter</button>
+						<button class="newBookButton" id="control-buttons">new book</button>
+					</div>
+				</div>
 
-    </div>
-        <div class = "header">
+				<div class="cardblock"></div>
+			</div>
 
-        </div>
-        <div class = "library">
-            <div class = "controls">
-                <div class="section-title">it's a library</div>
-                <div class = "buttonz">               
-                    <button class = "addButton" id = "control-buttons">enter</button>
-                    <button class = "newBookButton" id = "control-buttons">new book</button>
-            </div>
-
-            </div>
-
-            <div class = "cardblock">
-
-            </div>
-
-        </div>
-
-    <div id = "footer">
-        <p>made by taylor</p>
-        <a href = "https://github.com/teajm">
-            <img id = "github-logo" src = "images/github-mark-white.png" alt="github logo">
-        </a>
-    </div>
-    
-</body>
-<script src = "script.js"></script>
+			<div id="footer">
+				<p>made by taylor</p>
+				<a href="https://github.com/teajm">
+					<img
+						id="github-logo"
+						src="images/github-mark-white.png"
+						alt="github logo"
+					/>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script src="script.js"></script>
 </html>
